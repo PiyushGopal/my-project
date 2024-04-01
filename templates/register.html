@@ -1,0 +1,24 @@
+<H1>Sign Up Below</H1>
+<style>
+h5{
+    color: red;
+}
+</style>
+<!-- this shows if there is any issue with username or password or email from view -->
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+
+<form method ="POST" action="register">
+    {% csrf_token %}
+    <p>Username
+    <input type="text" name="username" />
+    <p>Email
+    <input type="text" name="email" />
+    <p>Password
+    <input type="text" name="password" />    
+    <p>Repeat Password
+    <input type="text" name="password2" /> <br>
+    <input type ="submit" />
+
+
